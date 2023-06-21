@@ -7,7 +7,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `mydb` ;
 
 -- -----------------------------------------------------
 -- Schema mydb
@@ -18,8 +17,6 @@ USE `mydb` ;
 -- -----------------------------------------------------
 -- Table `mydb`.`MenuItems`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`MenuItems` ;
-
 CREATE TABLE IF NOT EXISTS `mydb`.`MenuItems` (
   `MenuItemsID` INT NOT NULL AUTO_INCREMENT,
   `CourseName` VARCHAR(255) NULL,
@@ -32,8 +29,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`Menu`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`Menu` ;
-
 CREATE TABLE IF NOT EXISTS `mydb`.`Menu` (
   `MenuID` INT NOT NULL,
   `MenuName` VARCHAR(45) NULL,
@@ -52,8 +47,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`Customers`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`Customers` ;
-
 CREATE TABLE IF NOT EXISTS `mydb`.`Customers` (
   `CustomerID` INT NOT NULL,
   `FullName` VARCHAR(255) NULL,
@@ -67,8 +60,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`Employees`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`Employees` ;
-
 CREATE TABLE IF NOT EXISTS `mydb`.`Employees` (
   `EmployeeID` INT NOT NULL AUTO_INCREMENT,
   `Name` VARCHAR(200) NULL,
@@ -84,8 +75,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`Bookings`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`Bookings` ;
-
 CREATE TABLE IF NOT EXISTS `mydb`.`Bookings` (
   `BookingID` INT NOT NULL AUTO_INCREMENT,
   `BookingDate` DATETIME NOT NULL,
@@ -111,8 +100,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`Orders`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`Orders` ;
-
 CREATE TABLE IF NOT EXISTS `mydb`.`Orders` (
   `OrderID` INT NOT NULL,
   `CustomerID` INT NULL,
@@ -134,20 +121,6 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Orders` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
-USE `mydb` ;
-
--- -----------------------------------------------------
--- Placeholder table for view `mydb`.`view1`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`view1` (`id` INT);
-
--- -----------------------------------------------------
--- View `mydb`.`view1`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`view1`;
-DROP VIEW IF EXISTS `mydb`.`view1` ;
-USE `mydb`;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
